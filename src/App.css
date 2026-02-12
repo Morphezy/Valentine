@@ -1,0 +1,188 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.kitty-cat {
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+.valentine-button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 1.2em 2.4em;
+  font-size: 1.5em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.valentine-button:hover {
+  border-color: #646cff;
+  transform: scale(1.1);
+}
+
+.valentine-button:focus,
+.valentine-button:focus-visible {
+  outline: none;
+}
+
+.button-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  position: relative;
+  height: 90px;
+}
+
+.yes-button {
+  background-color: #ff69b4;
+  color: white;
+}
+
+.yes-button:hover {
+  background-color: #ff1493;
+}
+
+.no-button {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  transition: all 0.1s ease;
+}
+
+.no-button:hover {
+  background-color: #ffdddd67;
+}
+
+.no-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 3rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  animation: slideIn 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+@keyframes slideIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-content h2 {
+  font-size: 2em;
+  color: #ff69b4;
+  margin-bottom: 0.3rem;
+}
+
+.modal-content p {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.modal-content img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.modal-button {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 0.8em 2em;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.modal-button:hover {
+  background-color: #ff1493;
+  transform: scale(1.05);
+}
+
+.victory-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.yes-button-victory {
+  padding: 2em 4em;
+  font-size: 2em;
+  background-color: #ff1493;
+}
