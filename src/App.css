@@ -186,3 +186,16 @@
   font-size: 2em;
   background-color: #ff1493;
 }
+.sad-modal {
+  background-color: #fff5f5;
+}
+
+.sad-emoji {
+  font-size: 5em;
+  margin: 1rem 0;
+}
+
+.sad-modal h3 {
+  font-size: 1.5em;
+  color: #666;
+}
