@@ -10,7 +10,7 @@ function Button() {
 
   const handleNoEscape = () => {
     const now = Date.now();
-    // Не убегать если был клик недавно
+
     if (now - lastEscapeTime < 100) return;
 
     setLastEscapeTime(now);
