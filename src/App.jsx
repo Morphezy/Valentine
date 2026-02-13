@@ -9,7 +9,7 @@ function App() {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  // Device detection: treat as non-desktop if UA or touch/small screen hints
+
   useEffect(() => {
     const detectDesktop = () => {
       const ua = navigator.userAgent || "";
@@ -78,10 +78,7 @@ function App() {
       >
         <div style={{ maxWidth: 600 }}>
           <h1 style={{ marginBottom: 10 }}>Я же просил с ноутбука!</h1>
-          <p style={{ opacity: 0.9 }}>
-            Для полной версии сайта откройте страницу на ноутбуке или
-            компьютере.
-          </p>
+          <img src="/hm.gif" alt="давай давай" />
         </div>
       </div>
     );
