@@ -35,6 +35,16 @@ function Button() {
     setShowSadModal(false);
   };
 
+  const handleCloseBrowser = () => {
+    // Попытка закрыть окно браузера
+    window.close();
+
+    // Если не сработало, перенаправляем на пустую страницу
+    setTimeout(() => {
+      window.location.href = "about:blank";
+    }, 100);
+  };
+
   return (
     <>
       <div className="button-container">
@@ -85,7 +95,7 @@ function Button() {
           >
             <h2 className="sad-emoji">😢</h2>
             <h3>Ну и гуляй тогда!</h3>
-            <button className="modal-button" onClick={closeSadModal}>
+            <button className="modal-button" onClick={handleCloseBrowser}>
               Ладно
             </button>
           </div>
