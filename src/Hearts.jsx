@@ -1,12 +1,15 @@
 import { useEffect, useState, useRef } from "react";
 import "./Hearts.css";
 
-function Hearts() {
+function Hearts({ active = true }) {
   const [hearts, setHearts] = useState([]);
   const counterRef = useRef(0);
+  const intervalRef = useRef(null);
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    if (!active) return;
+
+    intervalRef.current = setInterval(() => {
       const newHeart = {
         id: counterRef.current++,
         left: Math.random() * 100,
@@ -23,8 +26,14 @@ function Hearts() {
       });
     }, 300);
 
-    return () => clearInterval(interval);
-  }, []);
+    return () => {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+      setHearts([]);
+    };
+  }, [active]);
+
+  if (!active) return null;
 
   return (
     <div className="hearts-container">

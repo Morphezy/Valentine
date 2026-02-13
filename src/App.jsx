@@ -3,6 +3,7 @@ import Hearts from "./Hearts";
 import Place from "./Place";
 import { useEffect, useRef, useState } from "react";
 function App() {
+  const [heartsActive, setHeartsActive] = useState(false);
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -46,9 +47,9 @@ function App() {
       >
         {isPlaying ? "🔊 Музыка вкл" : "🔇 Музыка выкл"}
       </button>
-      <Place></Place>
+      <Place onYes={() => setHeartsActive(true)} heartsActive={heartsActive} />
 
-      <Hearts />
+      <Hearts active={heartsActive} />
     </>
   );
 }
